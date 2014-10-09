@@ -1,0 +1,39 @@
+// Copyright (c) 2014 Mimetics Inc.
+// All Rights Reserved
+//
+// THIS SOFTWARE IS PROVIDED BY MIMETICS "AS IS" WITHOUT ANY EXPRESSED OR 
+// IMPLIED WARRANTIES.  IN NO CASE SHALL MIMETICS OR ANY CONTRIBUTORS BE
+// LIABLE IN ANY DAMAGES CAUSED BY THE USE OF THIS SOFTWARE.  
+//
+// FileName: fncParm5.script
+// Version : 05.0
+//
+// Author  : myke predko
+//
+// Description: C application demonstrating integer parameter passing to a function with a delay so that "stepover" and "stepout" console commands can be demonstrated
+//
+// Release History:
+//  fncParm4 - Function Parameter Testing 
+//           - Trying to identify problem with passing a negative parameter
+//           - From fncParm2/Bringing it down to the lowest possible level
+//           - Also have issue with adding "+"?  
+//
+//  NOTE Initial Problems:
+//   1.  Mismatched parameters to function not flagged as an error.
+//   2.  Negative second parameters not handled correctly.
+//  fncParm5 - Add Delay to Show Full Operation
+
+    callFunction(1,     -1);
+
+    callFunction(-1,     +1);
+    callFunction(+1,     +1);
+
+callFunction(int value1, int value2) {
+
+    syscall(delay, itos(750));
+
+    syscall(cleardisplay, "");
+    syscall(setcursorstartx, "4");  syscall(setcursorstarty, "4");  
+    syscall(drawtext, "" + itos(value1) + " " + itos(value2));
+
+}
