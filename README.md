@@ -1,8 +1,6 @@
 fncParm5
 ========
 
-C:
-
 Application demonstrating integer parameter passing to a function with a delay so that "stepover" and "stepout" console commands can be demonstrated.  
 
 ### Project Information
