@@ -1,14 +1,16 @@
 fncParm5
 ========
 
-C application demonstrating integer parameter passing to a function with a delay so that "stepover" and "stepout" console commands can be demonstrated.  
+C:
+
+Application demonstrating integer parameter passing to a function with a delay so that "stepover" and "stepout" console commands can be demonstrated.  
 
 ### Project Information
 ```
 Type              : C
 Version           : 01.0
 Author            : myke predko
-Firmware          : 40
+Firmware          : 42
 ```
 
 
